@@ -4,8 +4,8 @@
 
     <span class="example-spacer"></span>
 
-    <span [hidden]="!loggedIn"><button mat-button>View Book List</button></span>
-    <span [hidden]="!loggedIn"><button mat-button>Add New Book</button></span>
-    <span [hidden]="!loggedIn"><button mat-button>Logout</button></span>
+    <span [hidden]="!loggedIn"><button mat-button routerLink="/viewBookList">View Book List</button></span>
+    <span [hidden]="!loggedIn"><button mat-button routerLink="/addBook">Add New Book</button></span>
+    <span [hidden]="!loggedIn" (click)="logout()"><button mat-button>Logout</button></span>
   </mat-toolbar-row>
 </mat-toolbar>

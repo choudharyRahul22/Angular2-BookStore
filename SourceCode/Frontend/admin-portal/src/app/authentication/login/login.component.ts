@@ -15,6 +15,14 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
+    this.authService.checkSession().subscribe(
+      response => {
+        this.loggedIn = true;
+      },
+      error => {
+        this.loggedIn = false;
+      }
+    );
   }
 
   onLogin(){
@@ -23,7 +31,7 @@ export class LoginComponent implements OnInit {
           console.log(response);
           localStorage.setItem("xAuthToken", response.json().token);
           this.loggedIn = true;
-          /*location.reload();*/
+          location.reload();
       },
       error => {
         console.log(error);

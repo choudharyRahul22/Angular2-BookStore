@@ -17,7 +17,7 @@
 
             <br>
 
-            <button type="submit" mat-raised-button class="mat-primary">Login</button>
+           <button type="submit" mat-raised-button class="mat-primary">Login</button>
 
           </form>
         </mat-grid-tile>
@@ -25,4 +25,6 @@
       <div [hidden]="!loggedIn"><h1>Loggged In</h1></div>
     </mat-grid-list>
   </div>
+
+  <div [hidden]="!loggedIn"><h1>You have been logged in</h1></div>
 </div>
